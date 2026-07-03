@@ -12,6 +12,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
@@ -183,5 +184,10 @@ class ProdutoServiceTest {
         assertThatThrownBy(() -> service.deletar(999L))
                 .isInstanceOf(RuntimeException.class)
                 .hasMessage("Produto não encontrado!");
+    }
+    
+    @Test
+    void meuTest() {
+    	assertEquals(1, 2); //vai errar de proposito
     }
 }
